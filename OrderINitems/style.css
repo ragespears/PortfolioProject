@@ -1,0 +1,761 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  color: #f0ece2;
+  background-color: white;
+  margin: 0;
+  padding-bottom: 100px;
+  background-image: url(imgs/background.jpg);
+  background-size: cover;
+  /* Same height as footer */
+}
+
+h1, h2, h3, h4, h5 {
+  color: white;
+}
+
+.content-wrapper {
+  width: 1050px;
+  margin: 0 auto;
+}
+
+.content-wrapper.error {
+  padding: 40px 0;
+}
+
+header {
+  position: relative;
+  border-bottom: 1px solid #EEEEEE;
+  /* background: #321f28; */
+  background-image: linear-gradient(#291921, #321f28);
+}
+
+header .content-wrapper {
+  display: flex;
+}
+
+html header h1 {
+  font-family: Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  font-size: 20px;
+  margin: 0;
+  padding: 24px 0;
+}
+
+header nav {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: #f0ece2;
+  padding: 10px 10px;
+  margin: 0 10px;
+}
+
+header nav a:hover {
+  border-bottom: 1px solid #aaa;
+}
+
+header .link-icons {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+header .link-icons .search i {
+  font-size: 18px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+header .link-icons .search:hover {
+  color: #A8A59E;
+}
+
+header .link-icons .search input {
+  display: none;
+  border: 0;
+  border-bottom: 1px solid #EEEEEE;
+  padding: 10px 0;
+  width: 200px;
+  outline: none;
+  margin-right: 10px;
+}
+
+header .link-icons .responsive-toggle {
+  display: none;
+}
+
+header .link-icons a {
+  position: relative;
+  text-decoration: none;
+  color: #f0ece2;
+  padding: 0 10px;
+}
+
+header .link-icons a:hover {
+  color: #A8A59E;
+}
+
+header .link-icons a i {
+  font-size: 18px;
+}
+
+header .link-icons a span {
+  display: inline-block;
+  text-align: center;
+  background-color: #A8A59E;
+  border-radius: 50%;
+  color: #804F66;
+  font-size: 12px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  font-weight: bold;
+  position: absolute;
+  top: -4px;
+  right: 2px;
+}
+
+main .featured {
+  display: flex;
+  flex-direction: column;
+  /* background-image: url(imgs/background.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+main .featured h2 {
+  display: inline-block;
+  margin: 0;
+  width: 1050px;
+  font-family: Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+  font-size: 68px;
+  color: #FFFFFF;
+  padding-bottom: 10px;
+}
+
+main .featured p {
+  display: inline-block;
+  margin: 0;
+  width: 1050px;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+main .recentlyadded h2 {
+  display: block;
+  font-weight: normal;
+  margin: 0;
+  padding: 40px 0;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+main .recentlyadded .items, main .items .items-wrapper {
+  background-color:rgba(255, 255, 255, 0.92);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px 0 0 0;
+}
+
+main .recentlyadded .items .item, main .items .items-wrapper .item {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  width: 25%;
+  padding-left: 30px;
+  padding-bottom: 50px;
+}
+
+main .recentlyadded .items .item img, main .items .items-wrapper .item img {
+  border: 1px solid #291921;
+  transform: scale(1);
+  transition: transform 1s;
+}
+
+main .recentlyadded .items .item .name, main .items .items-wrapper .item .name {
+  display: block;
+  color: black;
+  padding: 20px 0 2px 0;
+}
+
+main .recentlyadded .items .item .price, main .items .items-wrapper .item .price {
+  display: block;
+  color: black;
+}
+
+main .recentlyadded .items .item .rrp, main .items .items-wrapper .item .rrp {
+  color: #BBBBBB;
+  text-decoration: line-through;
+}
+
+main .recentlyadded .items .item:hover img, main .items .items-wrapper .item:hover img {
+  border: 1px solid #291921;
+  transform: scale(1.05);
+  transition: transform 1s;
+}
+
+main .recentlyadded .items .item:hover .name, main .items .items-wrapper .item:hover .name {
+  text-decoration: underline;
+}
+
+main > .item {
+  display: flex;
+  padding: 40px 0;
+}
+
+main > .item h1 {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 0;
+  padding: 20px 0 10px 0;
+}
+
+main > .item .description {
+  font-weight: bold;
+  background-color:rgba(64, 64, 64, 0.8);
+}
+
+main > .item .item-small-imgs img {
+  border: 1px solid #EEEEEE;
+  cursor: pointer;
+  margin: 20px 12px 0 0;
+}
+
+main > .item .item-small-imgs img.selected {
+  border: 1px solid #c8c8c8;
+}
+
+main > .item .item-wrapper {
+  padding-left: 15px;
+}
+
+main > .item .price {
+  display: block;
+  font-size: 22px;
+  color: #f0ece2;
+}
+
+main > .item .rrp {
+  color: #BBBBBB;
+  text-decoration: line-through;
+  font-size: 22px;
+  padding-left: 5px;
+}
+
+main > .item form {
+  display: flex;
+  flex-flow: column;
+  margin: 40px 0;
+}
+
+main > .item form select, main > .item form input[type="number"] {
+  width: 400px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  color: #555555;
+  border-radius: 5px;
+}
+
+main > .item form input[type="submit"] {
+  background: #CC796A;
+  /* background: blue; */
+  border: 0;
+  color: #FFFFFF;
+  width: 400px;
+  padding: 12px 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+main > .item form input[type="submit"]:hover {
+  background: #AB6559;
+}
+
+main > .items h1 {
+  display: block;
+  font-weight: strong;
+  font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+  margin: 35px 0 0;
+  padding: 40px 0;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+  background-color:rgba(255, 255, 255, 0.92);
+  color: black;
+  border-bottom: 1px solid #CCC8C8;
+}
+
+main > .items .items-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+  background-color:rgba(255, 255, 255, 0.92);
+  color: black;
+}
+
+main > .items .items-header p {
+  margin: 0;
+}
+
+main > .items .items-header label {
+  padding-left: 20px;
+  padding-top: 8px;
+  color: black;
+}
+
+main > .items .items-header select {
+  padding: 5px;
+  margin-left: 15px;
+  margin-right: 30px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  color: #555555;
+  border-radius: 5px;
+}
+
+main > .items .buttons {
+  text-align: right;
+  padding-bottom: 40px;
+}
+
+main > .items .buttons a {
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 5px;
+  padding: 12px 20px;
+  border: 0;
+  background: #4e5c70;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+main > .items .buttons a:hover {
+  background: #434f61;
+}
+
+main .cart h1, main .myaccount h1 {
+  display: block;
+  font-weight: strong;
+  font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+  margin: 0;
+  padding: 40px 0;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+main .cart table, main .myaccount table {
+  background-color:rgba(255, 255, 255, 0.92);
+  color: #000024;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+main .cart table thead td, main .myaccount table thead td {
+  padding: 30px 0;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+main .cart table thead td:last-child, main .myaccount table thead td:last-child {
+  text-align: right;
+}
+
+main .cart table tbody td, main .myaccount table tbody td {
+  padding: 20px 0;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+main .cart table tbody td:last-child, main .myaccount table tbody td:last-child {
+  text-align: right;
+}
+
+main .cart table .img, main .myaccount table .img {
+  width: 80px;
+}
+
+main .cart table .remove, main .myaccount table .remove {
+  color: #000024;
+  font-size: 12px;
+  padding-top: 3px;
+}
+
+main .cart table .remove:hover, main .myaccount table .remove:hover {
+  text-decoration: underline;
+}
+
+main .cart table .price, main .myaccount table .price {
+  color: #3B3B3B;
+}
+
+main .cart table a, main .myaccount table a {
+  text-decoration: none;
+  color: #555555;
+}
+
+main .cart table input[type="number"], main .myaccount table input[type="number"] {
+  width: 68px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: #3B3B3B;
+  border-radius: 5px;
+}
+
+main .cart .subtotal, main .myaccount .subtotal {
+  background-color:rgba(50, 31, 40, 0.92);
+  text-align: right;
+  padding: 12px 8px;
+  margin: 25px 0 10px;
+}
+
+.subtotal-white-box {
+  /* background-color:rgba(255, 255, 255, 0.95); */
+  display: inline-block;
+  padding: 5px;
+}
+main .cart .subtotal .text, main .myaccount .subtotal .text {
+  padding-right: 40px;
+  font-size: 18px;
+  color: white;
+}
+
+main .cart .subtotal .price, main .myaccount .subtotal .price {
+  font-size: 18px;
+  color: white;
+}
+
+main .cart .buttons, main .myaccount .buttons {
+  text-align: right;
+  padding-bottom: 10px;
+}
+
+main .cart .buttons input[type="submit"], main .myaccount .buttons input[type="submit"] {
+  margin: 0 0 5px 5px;
+  padding: 12px 20px;
+  border: 0;
+  background: #CC796A;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+main .cart .buttons input[type="submit"]:hover, main .myaccount .buttons input[type="submit"]:hover {
+  background: #AB6559;
+}
+
+main .placeorder h1 {
+  display: block;
+  font-weight: normal;
+  margin: 0;
+  padding: 40px 0;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+main .placeorder p {
+  text-align: center;
+}
+
+main .checkout h1, main .myaccount h1 {
+  display: block;
+  font-weight: strong;
+  font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+  margin: 0;
+  padding: 40px 0;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+main .checkout form, main .myaccount form {
+  width: 600px;
+  display: flex;
+  flex-flow: wrap;
+  padding-bottom: 40px;
+}
+
+main .checkout form h2, main .myaccount form h2 {
+  width: 100%;
+  font-weight: normal;
+  font-size: 20px;
+  padding: 50px 0 20px 0;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+main .checkout form h2:first-child, main .myaccount form h2:first-child {
+  padding: 20px 0 20px 0;
+}
+
+main .checkout form label, main .myaccount form label {
+  display: block;
+  padding: 15px 0 10px 0;
+}
+
+main .checkout form input, main .checkout form select, main .myaccount form input, main .myaccount form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+main .checkout form input[type="submit"], main .checkout form button, main .myaccount form input[type="submit"], main .myaccount form button {
+  width: 100%;
+  border: 0;
+  margin-top: 40px;
+  padding: 14px 20px;
+  background: #CC796A;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+main .checkout form input[type="submit"]:hover, main .checkout form button:hover, main .myaccount form input[type="submit"]:hover, main .myaccount form button:hover {
+  background: #AB6559;
+}
+
+main .checkout form .row1, main .checkout form .row2, main .myaccount form .row1, main .myaccount form .row2 {
+  width: 50%;
+  display: inline-block;
+}
+
+main .checkout form .row1, main .myaccount form .row1 {
+  padding-right: 10px;
+}
+
+main .checkout form .row2, main .myaccount form .row2 {
+  padding-left: 10px;
+}
+
+main .checkout .paypal, main .myaccount .paypal {
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+main .checkout .paypal button, main .myaccount .paypal button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px 7px 20px;
+  background-color: #FFC439;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: inherit;
+}
+
+main .checkout .paypal button:hover, main .myaccount .paypal button:hover {
+  background-color: #f3bb37;
+}
+
+main .myaccount form {
+  width: 100%;
+}
+
+main .myaccount h2 {
+  width: 100%;
+  font-weight: normal;
+  font-size: 20px;
+  padding: 30px 0 20px 0;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+main .myaccount table {
+  padding-bottom: 40px;
+}
+
+main .myaccount table tr:last-child td {
+  border-bottom: 0;
+}
+
+main .myaccount .login-register {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+main .myaccount .login-register h1 {
+  text-align: left;
+  padding-top: 15px;
+}
+
+main .myaccount .login-register .login {
+  width: 100%;
+  border-right: 1px solid #f6f6f6;
+  padding-right: 45px;
+}
+
+main .myaccount .login-register .register {
+  width: 100%;
+  padding-left: 45px;
+}
+
+main p.error {
+  color: red;
+}
+
+footer {
+  /* background: #321f28; */
+  /* background: #1C1415; */
+  background-image: linear-gradient(#321f28, #291921);
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #EEEEEE;
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsive CSS below */
+@media screen and (max-width: 1050px) {
+  .rhide {
+    display: none;
+  }
+  .content-wrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+  header {
+    justify-content: space-between;
+  }
+  header h1 {
+    font-size: 16px;
+    flex-basis: auto;
+  }
+  header nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 1px);
+    width: 100%;
+    /* background-color: #FFFFFF; */
+  }
+  header nav a {
+    display: block;
+    padding: 10px 10px;
+    margin: 0;
+    border-bottom: 1px solid #EEEEEE;
+  }
+  header .link-icons {
+    display: inline-flex;
+    width: 100px;
+  }
+  header .link-icons .responsive-toggle {
+    display: block;
+  }
+  main .recentlyadded .items, main .items .items-wrapper {
+    justify-content: center;
+  }
+  main .recentlyadded .items .item, main .items .items-wrapper .item {
+    width: auto;
+  }
+  main .featured {
+    height: 300px;
+  }
+  main .featured h2 {
+    font-size: 48px;
+    width: 100%;
+    padding: 0 10px;
+  }
+  main .featured p {
+    font-size: 22px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  main > .items .items-header {
+    flex-flow: column;
+  }
+  main > .items .items-header p {
+    padding-bottom: 10px;
+  }
+  main > .items .items-header form {
+    display: flex;
+    flex-flow: column;
+  }
+  main > .items .items-header form label {
+    padding-top: 15px;
+  }
+  main > .item {
+    padding: 0 10px;
+    flex-flow: column;
+  }
+  main > .item .item-imgs {
+    padding: 0 10px;
+  }
+  main > .item .item-imgs .item-img-large {
+    width: 100%;
+    height: auto;
+  }
+
+  main > .item .item-imgs .item-small-imgs .item-img-small {
+    width: 50px;
+    height: 50px;
+  }
+  main > .item form input[type="number"], main > .item form input[type="submit"] {
+    width: 100%;
+  }
+  main > .item .item-wrapper {
+    padding: 0;
+  }
+  main .cart table input[type="number"] {
+    width: 40px;
+  }
+  main .checkout form, main .myaccount form {
+    width: 100%;
+  }
+  main .myaccount .login-register {
+    flex-flow: column;
+  }
+  main .myaccount .login-register .login {
+    border-right: 0;
+    padding: 10px;
+  }
+  main .myaccount .login-register .register {
+    padding: 10px;
+  }
+}
