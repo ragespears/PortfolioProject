@@ -1,1 +1,0 @@
-<Book xmlns="http://schemas.datacontract.org/2004/07/authorAndBook" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><author><background>An aspiring author and programmer coming from the small town of babylon.</background><first>Danny</first><last>Gee</last></author><price>19.99</price><title>The Lion King</title></Book>
