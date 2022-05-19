@@ -1,0 +1,12 @@
+C:\Users\geed\source\repos\HW1DLL\HW1DLL\bin\Debug\HW1DLL.dll
+C:\Users\geed\source\repos\HW1DLL\HW1DLL\bin\Debug\HW1DLL.pdb
+C:\Users\geed\source\repos\HW1DLL\HW1DLL\obj\Debug\HW1DLL.csprojAssemblyReference.cache
+C:\Users\geed\source\repos\HW1DLL\HW1DLL\obj\Debug\HW1DLL.csproj.CoreCompileInputs.cache
+C:\Users\geed\source\repos\HW1DLL\HW1DLL\obj\Debug\HW1DLL.dll
+C:\Users\geed\source\repos\HW1DLL\HW1DLL\obj\Debug\HW1DLL.pdb
+C:\Users\geed\Desktop\C#\HW1Folders\HW1DLL\HW1DLL\bin\Debug\HW1DLL.dll
+C:\Users\geed\Desktop\C#\HW1Folders\HW1DLL\HW1DLL\bin\Debug\HW1DLL.pdb
+C:\Users\geed\Desktop\C#\HW1Folders\HW1DLL\HW1DLL\obj\Debug\HW1DLL.csprojAssemblyReference.cache
+C:\Users\geed\Desktop\C#\HW1Folders\HW1DLL\HW1DLL\obj\Debug\HW1DLL.csproj.CoreCompileInputs.cache
+C:\Users\geed\Desktop\C#\HW1Folders\HW1DLL\HW1DLL\obj\Debug\HW1DLL.dll
+C:\Users\geed\Desktop\C#\HW1Folders\HW1DLL\HW1DLL\obj\Debug\HW1DLL.pdb
